@@ -552,7 +552,7 @@
                                 <Font size="35.0" />
                             </font>
                         </TextField>
-                        <TextField fx:id="input67" alignment="CENTER" prefHeight="75.0" prefWidth="73.0" text="" GridPane.columnIndex="1">
+                        <TextField fx:id="input67" alignment="CENTER" prefHeight="75.0" prefWidth="73.0" GridPane.columnIndex="1">
                             <font>
                                 <Font size="35.0" />
                             </font>

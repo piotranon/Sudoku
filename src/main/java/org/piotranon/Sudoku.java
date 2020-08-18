@@ -50,7 +50,6 @@ public class Sudoku {
                                 System.out.println(e);
                             }
                             if (!solve(grid)) {
-                                System.out.println("backtrack");
                                 grid[y][x] = 0;
                                 log.info("trying another number to fit at " + p);
                             } else {
