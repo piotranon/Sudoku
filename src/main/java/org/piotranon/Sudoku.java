@@ -15,12 +15,13 @@ import java.util.List;
 public class Sudoku {
 
     private Logger log = LogManager.getLogger(Sudoku.class);
+    private int delay = 0;
 
     public Sudoku() {
-        Configurator.setLevel(log.getName(), Level.DEBUG);
+        Configurator.setLevel(log.getName(), Level.WARN);
     }
 
-    //Backtracking algorithm
+    //Backtracking/recursive algorithm
 
     // Returns true - grid solved (does not contains any 0 in grid)
     // Returns false - if the algorithm got to the end where are 0 in grid and there is not possible way to fill the next point
@@ -42,8 +43,14 @@ public class Sudoku {
                         for (int number : availableToFit) {
                             grid[y][x] = number;
                             log.info("fiting " + number + " from " + availableToFit.toString() + " at " + p);
-
+//                            viewGrid(grid);
+                            try {
+                                Thread.sleep(delay);
+                            } catch (Exception e) {
+                                System.out.println(e);
+                            }
                             if (!solve(grid)) {
+                                System.out.println("backtrack");
                                 grid[y][x] = 0;
                                 log.info("trying another number to fit at " + p);
                             } else {

@@ -63,6 +63,10 @@ public class SudokuController {
         Sudoku sudoku = new Sudoku();
         if (validateInputNumber(grid)) {
             if (sudoku.validateIfTherIsNoInputMistakes(grid)) {
+
+                input08.setStyle("-fx-text-fill: green;");
+
+
                 sudoku.solve(grid);
                 sudoku.viewGrid(grid);
                 displayGrid(grid);
