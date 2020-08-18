@@ -41,9 +41,9 @@ public class App extends Application {
                 {0, 0, 0, 0, 0, 0, 0, 0, 0}
         };
 
-        sudoku.viewGrid(grid);
-        sudoku.solve(emptygrid);
-        sudoku.viewGrid(emptygrid);
+//        sudoku.viewGrid(grid);
+//        sudoku.solve(emptygrid);
+//        sudoku.viewGrid(emptygrid);
 
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Sudoku.fxml"));
         Parent root = fxmlLoader.load();
